@@ -19,11 +19,14 @@ from myVars import *
 import math, copy
 
 # This function works, but it's just math.  
+# This is just a simple math function.
 def doCalculateMass(diameter, length, density):
+    """ Calculate the mass of a cylinder with a given diameter, length, and density."""
     radius = diameter / 2.0
     area = math.pi * radius * radius
-    mass = area * length * density
+    mass = area * length * density  # length is height in this case.
     return mass
+
 
 # This could be done more elegantly, but it works fine as is so I'm leaving it.
 def formMaterialInfoString(firstString, flatRate, length, time = None):
@@ -165,12 +168,4 @@ def editMaterial(matFile):
 
 
 
-
-# This is just a simple math function.
-def doCalculateMass(diameter, length, density):
-    """ Calculate the mass of a cylinder with a given diameter, length, and density."""
-    radius = diameter / 2.0
-    area = math.pi * radius * radius
-    mass = area * length * density  # length is height in this case.
-    return mass
 

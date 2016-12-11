@@ -73,12 +73,12 @@ def nvPrompt(valName = "this property", shouldBeNumeric = False, shouldBeFloat =
     if shouldBeNumeric:
         import re  # We need this module for regex
         if shouldBeFloat:
-            num_format = re.compile("^\d+\.\d+$")  # We expect numbers, a decimal point, then more numbers.
+            num_format = re.compile("^\d*\.\d+$")  # We expect a decimal point, then numbers.
         else:
-            num_format = re.compile("^\d+\.?\d*$")  # Decimal point is optional.
+            num_format = re.compile("^\d*\.?\d*$")  # Decimal point is optional.
         val = input("Enter a new value for " + valName + ": ")
         while re.match(num_format, val) == None:  # re.match() returns a match object if there is one, and returns None if there is not.
             val = input("Enter a new value for " + valName + ": ")
     else:
-        val = input("Enter a new value for " + valName + ": ")  # If we don't care,just ask straight away.
+        val = input("Enter a new value for " + valName + ": ")  # If we don't care, just ask straight away.
     return val
