@@ -50,7 +50,7 @@ def mainmenu(OptionCompositeList, sep, title = "==Main Menu=="):
         print(OptionCompositeList[0][iter].lower() + sep + OptionCompositeList[1][iter])
     # Ask for input:
     while chosenStr.lower() not in OptionCompositeList[0]:
-        print("Enter an option and press ENTER: ", end='')
+        print("\nEnter an option and press ENTER: ", end='')
         chosenStr = input()
     # Return the index of the chosen option:
     return(OptionCompositeList[0].index(chosenStr.lower()))

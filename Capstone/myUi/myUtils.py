@@ -77,8 +77,9 @@ def nvPrompt(valName = "this property", shouldBeNumeric = False, shouldBeFloat =
         else:
             num_format = re.compile("^\d*\.?\d*$")  # Decimal point is optional.
         val = input("Enter a new value for " + valName + ": ")
-        while re.match(num_format, val) == None:  # re.match() returns a match object if there is one, and returns None if there is not.
+        while re.match(num_format, val) == None or val == '':  # re.match() returns None if the string doesn't match the regex.  Also, we need to catch blank strings.
             val = input("Enter a new value for " + valName + ": ")
-    else:
-        val = input("Enter a new value for " + valName + ": ")  # If we don't care, just ask straight away.
+    else:  # If we don't care, just ask straight away.
+       while val == '':  # Catch blank strings.     
+            val = input("Enter a new value for " + valName + ": ")  
     return val

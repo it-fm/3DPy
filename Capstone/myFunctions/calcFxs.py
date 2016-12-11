@@ -48,7 +48,7 @@ def formMaterialInfoString(firstString, flatRate, length, time = None):
             currentTimeString =       "Time set:          " + str(time) + '\n'
         else:
             currentTimeString = ''
-        openingString = titleString + matNameString + matDensityString + matDiameterString + matPriceString + matHourlyString + matFlatChargeString + currentLengthString + currentTimeString
+        openingString = titleString + matNameString + matDiameterString + matDensityString +  matPriceString + matHourlyString + matFlatChargeString + currentLengthString + currentTimeString
         return openingString
 
 

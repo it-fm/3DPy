@@ -26,6 +26,6 @@ class quickCalcMenu:
     mainComposite = [mainChars, mainOpts]
 
 class editMaterialMenu:
-    mainChars = ['n', 'd', 'g', 'p', 'h', 'j', 's', 'w', 'q']
-    mainOpts = ["Name", "Diameter", "Density", "Price per kilo", "Price per Hour", "Flat Handling Charge", "Select / Create New Material".upper(), "SAVE MATERIAL TO FILE", "Return to main menu"]
+    mainChars = ['n', 'd', 'g', 'k', 'h', 'c', 's', 'w', 'q']
+    mainOpts = ["Name", "Diameter", "Density", "Cost per kilo", "Cost per Hour", "Handling Charge", "Select / Create New Material".upper(), "SAVE MATERIAL TO FILE", "Return to main menu"]
     mainComposite = [mainChars, mainOpts]

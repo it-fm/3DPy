@@ -23,7 +23,7 @@ from myFileFxs import *
 from myFunctions import *
 from myVars import *
 
-INTROTEXT = """3DPy Cost Calculator -- Version 1.0.7
+INTROTEXT = """3DPy Cost Calculator -- Version 1.1.3
     Copyright (c) 2016, Logan Power
     All Rights Reserved.
     This software is released under the terms of the FreeBSD License, included with this software in LICENSE.txt
