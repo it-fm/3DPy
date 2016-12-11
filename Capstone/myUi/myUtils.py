@@ -75,7 +75,7 @@ def nvPrompt(valName = "this property", shouldBeNumeric = False, shouldBeFloat =
         if shouldBeFloat:
             num_format = re.compile("^\d+\.\d+$")  # We expect numbers, a decimal point, then more numbers.
         else:
-            num_format = re.compile("^[1-9][0-9]*\.?[0-9]+$")  # Can't begin with a zero, and decimal point is optional.
+            num_format = re.compile("^\d+\.?\d*$")  # Decimal point is optional.
         val = input("Enter a new value for " + valName + ": ")
         while re.match(num_format, val) == None:  # re.match() returns a match object if there is one, and returns None if there is not.
             val = input("Enter a new value for " + valName + ": ")
